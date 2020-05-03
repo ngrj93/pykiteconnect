@@ -796,6 +796,8 @@ class KiteConnect(object):
             # Parse date
             if len(row["expiry"]) == 10:
                 row["expiry"] = dateutil.parser.parse(row["expiry"]).date()
+            else:
+                row["expiry"] = None
 
             records.append(row)
 
